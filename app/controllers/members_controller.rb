@@ -1,48 +1,41 @@
 class MembersController < ApplicationController
   def index
-    @locations = Location.all
+    @members = Member.all
   end
 
   def show
-    find_location
-    find_admin
-    @post = @location.posts.find(params[:id])
+    find_member
   end
 
   def new
-    @location = Location.new
-    find_admin
+    @member = Member.new
   end
 
   def edit
-    find_location
-    find_admin
+    find_member
   end
 
   def create
-    find_admin
-    @location = Location.new(location_params)
-    if @location.save
-      redirect_to location_path(@location)
+    @member = Member.new(member_params)
+    if @member.save
+      redirect_to members_path(@member)
     else 
       render 'new'
     end
   end
 
   def update
-    find_admin
-    find_location
-    if @location.save
-      redirect_to location_path(@location)
+    find_member
+    if @member.save
+      redirect_to member_path(@member)
     else
       render 'edit'
     end
   end
 
   def destroy
-    find_admin
-    find_location
-    @location.destroy
+    find_member
+    @member.destroy
   end 
 
   private
