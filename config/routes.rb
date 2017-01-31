@@ -7,5 +7,5 @@ Rails.application.routes.draw do
     resources :sessions, only: [:create, :destroy]
     resources :members
 
-    root to: "members#index"
+    root to: "pages#index"
 end
