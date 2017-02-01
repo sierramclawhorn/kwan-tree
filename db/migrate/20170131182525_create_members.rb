@@ -3,9 +3,10 @@ class CreateMembers < ActiveRecord::Migration[5.0]
     create_table :members do |t|
       t.string :name
       t.string :number
-      t.date :birthdate
-      t.date :deathdate
+      t.integer :birthdate
+      t.integer :deathdate
       t.string :location
+      t.text :note
 
       t.timestamps
     end
