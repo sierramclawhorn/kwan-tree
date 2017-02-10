@@ -12,12 +12,15 @@ $(document).ready(function() {
 		});
 
 		player.loadVideo(replacementVideo).then(function(id) {
+			setNewVideo();
 			console.log('switch video');
 		});
 
-		player.setCurrentTime(playTime).then(function(seconds) {
-			console.log('new video set to ' + seconds);
-		});
+		var setNewVideo = function() {
+			player.setCurrentTime(playTime).then(function(seconds) {
+				console.log('new video set to ' + seconds);
+			});
+		};
 	});
 
 })
