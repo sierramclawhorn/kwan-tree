@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-	var iframe = document.querySelector('iframe');
+	var iframe = $('#video');
     var player = new Vimeo.Player(iframe);
 	var initialVideo = "https://player.vimeo.com/video/199619694";
 	var replacementVideo = "https://player.vimeo.com/video/199619376";
@@ -22,7 +22,7 @@ $(document).ready(function() {
 		};
 
 		var updateLink = function(){
-			$('#video iframe').attr('src', replacementVideo);
+			$('#videoDiv #video').attr('src', replacementVideo);
 			startPlayTime();
 			console.log('after findPlayTime');
 			console.log('in switcher ' + playTime);
