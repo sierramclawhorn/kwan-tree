@@ -23,10 +23,9 @@ $(document).ready(function() {
 
 		var updateLink = function(){
 			$('#videoDiv #video').attr('src', replacementVideo);
-			startPlayTime();
+			startPlayTime(); // move?
 			console.log('after findPlayTime');
 			console.log('in switcher ' + playTime);
-
 		};
 
 		var startPlayTime = function() {
