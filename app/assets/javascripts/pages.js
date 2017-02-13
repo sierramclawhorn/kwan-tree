@@ -2,8 +2,8 @@ $(document).ready(function() {
 
 	var iframe = $('#video');
 	var player = new Vimeo.Player(iframe);
-    var initialVideo = '199619694'; //change to digits in initial video's link (https://player.vimeo.com/video/199619694)
-    var replacementVideo = '199619376'; //change to digits in replacement video's link
+    var initialVideo = '199619694'; //change to match initial video's url id number (https://player.vimeo.com/video/199619694)
+    var replacementVideo = '199619376'; //change to match other video's url id number
     var playTime = '';
 
     var findPlaybackTime = function () {
