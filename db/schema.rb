@@ -18,21 +18,12 @@ ActiveRecord::Schema.define(version: 20170131182525) do
   create_table "members", force: :cascade do |t|
     t.string   "name"
     t.string   "number"
-    t.date     "birthdate"
-    t.date     "deathdate"
+    t.integer  "birthdate"
+    t.integer  "deathdate"
     t.string   "location"
+    t.text     "note"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "name"
-    t.string   "oauth_token"
-    t.datetime "oauth_expires_at"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
   end
 
 end
