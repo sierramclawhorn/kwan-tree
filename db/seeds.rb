@@ -19,8 +19,8 @@ branches = Branch.create([
 ])
 
 members = Member.create([
-	{ name: 'Yuet Meng Kwan', number: '1', birthdate: 1858, deathdate: 1913, branch_id: 1 },
-	{ name: 'Hin-Cheong Lau', number: '1S', birthdate: 1849, deathdate: nil, branch_id: 1 },
+	{ name: 'Yuet Meng Kwan', number: [1], spouse: false, birthdate: 1858, deathdate: 1913, branch_id: 1 },
+	{ name: 'Hin-Cheong Lau', number: [1], spouse: true, birthdate: 1849, deathdate: nil, branch_id: 1 },
 
 	{ name: 'Keng Wan Kwan', number: '2', birthdate: 1860, deathdate: 1923, branch_id: 2 },
 	{ name: 'Yim-Kheng Lam', number: '2S', birthdate: 1865, deathdate: 1924, branch_id: 2 },
