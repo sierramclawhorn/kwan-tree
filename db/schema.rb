@@ -23,14 +23,15 @@ ActiveRecord::Schema.define(version: 20170411193531) do
 
   create_table "members", force: :cascade do |t|
     t.string   "name"
-    t.string   "number"
+    t.string   "number",     default: [],              array: true
+    t.boolean  "spouse"
     t.integer  "birthdate"
     t.integer  "deathdate"
     t.string   "location"
     t.text     "note"
     t.integer  "branch_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
     t.index ["branch_id"], name: "index_members_on_branch_id", using: :btree
   end
 
