@@ -1,3 +1,9 @@
 <% @members.each do |member| %>
-	<p><%= member.name %> <%= member.number %></p>
+	<p><%= member.name %> -
+	<% member.number.each do |num| %>
+		<%= num %>
+	<% end %>
+	<% if member.spouse == true %>
+		S
+	<% end %></p>
 <% end %>
