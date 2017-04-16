@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20170411193531) do
 
   create_table "members", force: :cascade do |t|
     t.string   "name"
-    t.string   "number",     default: [],              array: true
+    t.integer  "number",     default: [],              array: true
     t.boolean  "spouse"
     t.integer  "birthdate"
     t.integer  "deathdate"

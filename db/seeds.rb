@@ -59,7 +59,7 @@ members = Member.create([
 	{ name: 'King-Tak Yeung', number: [2,3], spouse: true, birthdate: 1891, deathdate: 1972, branch_id: 2 },
 	{ name: 'Hattie Sek-Yu Young', number: [2,3,1], spouse: false, birthdate: 1923, deathdate: 2007, branch_id: 2 },
 	{ name: 'Harry Chang', number: [2,3,1], spouse: true, birthdate: 1925, deathdate: 2010, branch_id: 2 },
-	{ name: 'William Chang', number: ,2,3,1,1], spouse: false, birthdate: 1960, deathdate: nil, branch_id: 2 },
+	{ name: 'William Chang', number: [2,3,1,1], spouse: false, birthdate: 1960, deathdate: nil, branch_id: 2 },
 	{ name: 'Marisa Lo Chang', number: [2,3,1,1], spouse: true, birthdate: 1963, deathdate: nil, branch_id: 2 },
 	{ name: 'Gabriela Chang', number: [2,3,1,1,1], spouse: false, birthdate: 1991, deathdate: nil, branch_id: 2 },
 	{ name: 'Magdalene', number: [2,3,1,1,2], spouse: false, birthdate: 1995, deathdate: nil, branch_id: 2 },
