@@ -3,6 +3,7 @@ class CreateMembers < ActiveRecord::Migration[5.0]
     create_table :members do |t|
       t.string :name
       t.string :number, array: true, default: []
+      t.boolean :spouse
       t.integer :birthdate
       t.integer :deathdate
       t.string :location

@@ -19,17 +19,17 @@ branches = Branch.create([
 ])
 
 members = Member.create([
-	{ name: 'Yuet Meng Kwan', number: [1], birthdate: 1858, deathdate: 1913, branch_id: 1 },
-	{ name: 'Hin-Cheong Lau', number: [1,'S'], birthdate: 1849, deathdate: nil, branch_id: 1 },
+	{ name: 'Yuet Meng Kwan', number: [1], spouse: false, birthdate: 1858, deathdate: 1913, branch_id: 1 },
+	{ name: 'Hin-Cheong Lau', number: [1], spouse: true, birthdate: 1849, deathdate: nil, branch_id: 1 },
 
-	{ name: 'Keng Wan Kwan', number: [2], birthdate: 1860, deathdate: 1923, branch_id: 2 },
-	{ name: 'Yim-Kheng Lam', number: [2,'S'], birthdate: 1865, deathdate: 1924, branch_id: 2 },
-	{ name: 'Yaw-Yuan Kwan', number: [2,1], birthdate: 1887, deathdate: nil, branch_id: 2 },
-	{ name: 'Chee-Phang Chooi', number: [2,1,'S'], birthdate: nil, deathdate: nil, branch_id: 2 },
-	{ name: 'Shiu-Kei Kwan', number: [2,2], birthdate: 1890, deathdate: 1928, branch_id: 2 },
-	{ name: 'Sau-Sang Loke', number: [2,2,'S'], birthdate: 1890, deathdate: nil, branch_id: 2 },
-	{ name: 'David Chun-Shi Kwan', number: [2,2,1], birthdate: 1918, deathdate: 1989, branch_id: 2 },
-	{ name: 'Ruth Ho', number: [2,2,1,'S'], birthdate: 1918, deathdate: 2016, branch_id: 2 },
+	{ name: 'Keng Wan Kwan', number: [2], spouse: false, birthdate: 1860, deathdate: 1923, branch_id: 2 },
+	{ name: 'Yim-Kheng Lam', number: [2], spouse: true, birthdate: 1865, deathdate: 1924, branch_id: 2 },
+	{ name: 'Yaw-Yuan Kwan', number: [2,1], spouse: false, birthdate: 1887, deathdate: nil, branch_id: 2 },
+	{ name: 'Chee-Phang Chooi', number: [2,1], spouse: true, birthdate: nil, deathdate: nil, branch_id: 2 },
+	{ name: 'Shiu-Kei Kwan', number: [2,2], spouse: false, birthdate: 1890, deathdate: 1928, branch_id: 2 },
+	{ name: 'Sau-Sang Loke', number: [2,2], spouse: true, birthdate: 1890, deathdate: nil, branch_id: 2 },
+	{ name: 'David Chun-Shi Kwan', number: [2,2,1], spouse: false, birthdate: 1918, deathdate: 1989, branch_id: 2 },
+	{ name: 'Ruth Ho', number: [2,2,1], spouse: true, birthdate: 1918, deathdate: 2016, branch_id: 2 },
 	{ name: 'Andrew Pun Li Kwan', number: '2-2-1-1', birthdate: 1946, deathdate: nil, branch_id: 2 },
 	{ name: 'Suzie Sui Ling Wong', number: '2-2-1-1S', birthdate: 1945, deathdate: nil, branch_id: 2 },
 	{ name: 'Christie Tung Ying Kwan', number: '2-2-1-1-1', birthdate: 1977, deathdate: nil, branch_id: 2 },
