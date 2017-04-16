@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170131182525) do
+ActiveRecord::Schema.define(version: 20170411193531) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "branches", force: :cascade do |t|
+    t.integer  "branch"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "members", force: :cascade do |t|
     t.string   "name"
@@ -22,8 +28,10 @@ ActiveRecord::Schema.define(version: 20170131182525) do
     t.integer  "deathdate"
     t.string   "location"
     t.text     "note"
+    t.integer  "branch_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["branch_id"], name: "index_members_on_branch_id", using: :btree
   end
 
 end
