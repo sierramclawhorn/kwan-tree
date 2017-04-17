@@ -55,6 +55,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
-# Omniauth with facebook
-gem 'omniauth'
-gem 'omniauth-facebook', '1.4.0'
+# btree
+gem 'btree', '~> 0.0.0'
