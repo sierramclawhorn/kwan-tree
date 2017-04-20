@@ -1,0 +1,33 @@
+<%= form_tag(members_path, method: :get) do %>
+  <%= text_field_tag :term, params[:term] %>
+  <%= submit_tag 'Search', name: nil %>
+<% end %>
+
+
+<h1>Kwan Family</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Number</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  	<% @members.each do |member| %>
+    	<tr>
+      	<td><%= member.name %></td>
+      	<td><% member.number.each do |num| %>
+						<%= num %>
+					<% end %>
+					<% if member.spouse == true %>
+						S
+					<% end %></td>
+      	<td><%= link_to 'Show', member %></td>
+        <td><%= link_to 'Edit', root_path %></td> <!-- change to edit_member_path(member) -->
+        <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+     </tr>   
+     <% end %>    
+  </tbody>
+</table>

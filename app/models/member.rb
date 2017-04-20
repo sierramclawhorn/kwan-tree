@@ -9,7 +9,7 @@ class Member < ApplicationRecord
 
 	def self.search(term)
  		if term
- 		  where('name LIKE ?', "%#{term}%").order('number ASC')
+ 		  where('name LIKE ?', "%#{term}%")
  		else
  		  all
  		end
