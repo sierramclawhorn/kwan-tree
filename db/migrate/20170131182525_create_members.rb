@@ -6,9 +6,7 @@ class CreateMembers < ActiveRecord::Migration[5.0]
       t.boolean :spouse
       t.integer :birthdate
       t.integer :deathdate
-      t.string :location
       t.text :note
-      t.references :branch, using: :btree
 
       t.timestamps
     end

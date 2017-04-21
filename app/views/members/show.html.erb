@@ -1,0 +1,25 @@
+<%= @member.name %><br>
+
+Family Number:
+<% @member.number.each do |num| %>
+	<%= num %>
+	<% if @member.spouse == true %>
+		S
+	<% end %>
+<% end %><br>
+
+<% if @member.birthdate != nil %>
+	Birth: <%= @member.birthdate %><br>
+<% end %> 
+<% if @member.deathdate != nil %>
+	Death: <%= @member.deathdate %><br>
+<% end %>
+
+<% if @member.note %>
+	Notes: <%= @member.note %>
+<% end %>
+<br><br><br>
+
+
+<%= link_to 'Edit', edit_member_path %> - 
+<%= link_to 'Delete', member_path, method: :delete, data: { confirm: "Are you sure? -- really really really really truly positively absolutely sure!??" } %>

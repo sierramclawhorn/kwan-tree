@@ -1,7 +1,10 @@
 <%= form_tag(members_path, method: :get) do %>
-  <%= text_field_tag :term, params[:term] %>
+  <%= text_field_tag :search, params[:search], placeholder: 'Name Search - case sensitive', class: 'searchFormField' %>
   <%= submit_tag 'Search', name: nil %>
 <% end %>
+
+
+<p>Add a <%= link_to 'new family member', new_member_path %></p>
 
 
 <h1>Kwan Family</h1>
@@ -25,8 +28,7 @@
 						S
 					<% end %></td>
       	<td><%= link_to 'Show', member %></td>
-        <td><%= link_to 'Edit', root_path %></td> <!-- change to edit_member_path(member) -->
-        <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_member_path(member) %></td>
      </tr>   
      <% end %>    
   </tbody>

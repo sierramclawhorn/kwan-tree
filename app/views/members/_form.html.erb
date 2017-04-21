@@ -1,0 +1,46 @@
+<%= form_for [@member] do |f| %>
+    
+      <% if @member.errors.any? %>
+        <div id="error_explanation">
+          <h2>
+            <%= pluralize(@member.errors.count, "error") %> prohibited
+            this input from being saved:
+          </h2>
+          <ul>
+            <% @member.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <p>
+        <%= f.label "Name" %><br>
+        <%= f.text_field :name %>
+      </p>
+      <p>
+        <%= f.label "Number" %><br>
+        <%= f.text_field :number, placeholder: "separate each branch with a comma - ex. 7,2,3,1,2" %>
+      </p>
+      <p>
+        <%= f.label "Spouse?" %><br>
+        <%= f.check_box :spouse %>
+      </p>
+      <p>
+        <%= f.label "Birth Year" %><br>
+        <%= f.number_field :birthdate %>
+      </p>
+      <p>
+        <%= f.label "Death Year" %><br>
+        <%= f.number_field :deathdate %>
+      </p>
+      <p>
+        <%= f.label "Note (optional)" %><br> 
+        <%= f.text_area :note, placeholder: "contact info, location, remarriages, etc." %>
+      </p>
+
+      <p>
+        <%= f.submit "Add/Update Post" %>
+      </p>
+
+<% end %>

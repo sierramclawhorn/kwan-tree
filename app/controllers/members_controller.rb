@@ -1,6 +1,6 @@
 class MembersController < ApplicationController
   def index
-    @members = Member.search(params[:term])
+    @members = Member.search(params[:search])
   end
 
   def show
@@ -26,7 +26,7 @@ class MembersController < ApplicationController
 
   def update
     find_member
-    if @member.save
+    if @member.update(member_params)
       redirect_to member_path(@member)
     else
       render 'edit'
@@ -44,7 +44,7 @@ class MembersController < ApplicationController
     end
 
     def member_params
-      params.require(:member).permit(:name,:number, :spouse, :location, :term)
+      params.require(:member).permit(:name, :number, :spouse, :checkbox_value, :birthdate, :deathdate, :note, :search)
     end
 
 end
