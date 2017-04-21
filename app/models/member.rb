@@ -6,7 +6,7 @@ class Member < ApplicationRecord
  		if search
  		  where('name LIKE ?', "%#{search}%")
  		else
- 		  all
+ 		  all.order('number ASC')
  		end
 	end
 
